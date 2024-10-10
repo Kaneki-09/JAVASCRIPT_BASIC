@@ -3,28 +3,32 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>変数_01</title>
+    <title>練習_01</title>
 </head>
 <body>
+    <p id="result">0</p>
     <button id="plus">+</button>
 
     <script>
-        // const btn = document.getElementById("plus");
-        //             let x = 1;
-        // btn.addEventListener("click", function(){
+            let x = 0;
+        const btn = document.getElementById("plus");
+        btn.innerHTML = "数字を増やす";
 
-        //     x = x + 1;
-        //     console.log(x);
-        // });
-
-
-        let num = 0;
-        const plusBtn = document.getElementById("plus");
-
-        plusBtn.addEventListener("click", function(){
-            num = num + 1;
-            console.log(num);
+        btn.addEventListener("click", function(){
+            x = x + 1;
+            console.log(x);
+            result.innerHTML = x;
         });
+
+
+        //Sensei's_version
+        // let num = 0;
+        // const plusBtn = document.getElementById("plus");
+
+        // plusBtn.addEventListener("click", function(){
+        //     num = num + 1;
+        //     console.log(num);
+        // });
     </script>
 </body>
 </html>
