@@ -17,20 +17,20 @@
     <script>
         let num = 0;
 
-        const left = document.getElementById("left");
-        const center = document.getElementById("center");
-        const right = document.getElementById("right");
+        const leftBtn = document.getElementById("left");
+        const centerBtn = document.getElementById("center");
+        const rightBtn = document.getElementById("right");
         const monster = document.getElementById("monster");
 
-        left.addEventListener("click", function(){
+        leftBtn.addEventListener("click", function(){
             monster.style.transform = `translateX(${num -= 5}px)`
         });
 
-        center.addEventListener("click", function(){
+        centerBtn.addEventListener("click", function(){
             monster.style.transform = `translateX(${num = 0}px)`
         });
 
-        right.addEventListener("click", function(){
+        rightBtn.addEventListener("click", function(){
             monster.style.transform = `translateX(${num += 5}px)`
         })
     </script>
