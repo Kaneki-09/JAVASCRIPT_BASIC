@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Omikuji-2</title>
+    <style>
+        #result {
+            transition: 1s;
+        }
+
+        .ani {
+            transform: rotateY(360deg);
+        }
+    </style>
+</head>
+
+<body>
+    <button id="btn">占う</button>
+    <p><img id="result" src="https://trident.takagino.net/doc2024/javascript/assets/04/omikuji/omikuji.png" alt="占う">
+    </p>
+    <p id="message">何か一言が表示されます。</p>
+
+    <script>
+        const btn = document.getElementById("btn");
+        const result = document.getElementById("result");
+        const message = document.getElementById("message");
+
+        btn.addEventListener("click", function () {
+            let num = Math.floor(Math.random() * 5);
+            console.log(num);
+
+            switch (num) {
+                case 0:
+                    result.setAttribute('src', 'https://trident.takagino.net/doc2024/javascript/assets/04/omikuji/daikichi.png');
+                    message.innerHTML = '🥳';
+                    break;
+
+                case 1:
+                    result.setAttribute('src', 'https://trident.takagino.net/doc2024/javascript/assets/04/omikuji/chuukichi.png');
+                    message.innerHTML = '😏';
+                    break;
+
+                case 2:
+                    result.setAttribute('src', 'https://trident.takagino.net/doc2024/javascript/assets/04/omikuji/syoukichi.png');
+                    message.innerHTML = '🫡';
+                    break;
+
+                case 3:
+                    result.setAttribute('src', 'https://trident.takagino.net/doc2024/javascript/assets/04/omikuji/kyou.png');
+                    message.innerHTML = '😶';
+                    break;
+
+                case 4:
+                    result.setAttribute('src', 'https://trident.takagino.net/doc2024/javascript/assets/04/omikuji/daikyou.png');
+                    message.innerHTML = '😶‍🌫️';
+                    break;
+
+                default:
+                    break;
+            }
+
+            result.classList.toggle("ani");
+        });
+    </script>
+</body>
+
+</html>
