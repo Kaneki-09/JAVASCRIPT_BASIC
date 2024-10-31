@@ -5,6 +5,15 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>クリックゲーム</title>
+    <style>
+        #monster {
+            transition: .5sec;
+        }
+
+        .finish {
+            transform: rotate(720deg) scale(0);
+        }
+    </style>
 </head>
 
 <body>
@@ -19,8 +28,12 @@
         hp.innerHTML = `HP:${count}`;
 
         monster.addEventListener('click', function () {
+            count -= 1
             if (count > 0) {
-                hp.innerHTML = `HP:${count -= 1}`;
+                hp.innerHTML = `HP:${count}`;
+            } else if (count == 0) {
+                hp.innerHTML = `HP:${count}`;
+                monster.classList.add('finish');
             }
         });
     </script>
