@@ -40,9 +40,15 @@
         <button id="toTop">↑</button>
 
         <script>
-            const Top = document.querySelector('.toTop');
+            const toTop = document.getElementById("toTop");
 
-
+            window.addEventListener("scroll", function () {
+                if (window.scrollY > 300) {
+                    toTop.classList.add("active");
+                } else {
+                    toTop.classList.remove("active");
+                }
+            });
         </script>
     </body>
 </body>
