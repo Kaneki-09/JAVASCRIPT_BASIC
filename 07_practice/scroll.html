@@ -43,6 +43,8 @@
             const toTop = document.getElementById("toTop");
 
             window.addEventListener("scroll", function () {
+                console.log(window.scrollY);
+
                 if (window.scrollY > 300) {
                     toTop.classList.add("active");
                 } else {
