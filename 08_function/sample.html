@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FUNCTION</title>
+</head>
+
+<body>
+    <h1>見出し</h1>
+    <p>本文</p>
+    <button>ボタン</button>
+
+    <script>
+        // function testFunc(val1 = 10, val2 = 20) {
+        //     return (val1 + val2)
+        // }
+
+        // console.log(testFunc());
+        // testFunc(30, 50);
+
+        // let doller = changeDoller(100);
+        // console.log(doller);
+
+        // function changeDoller(yen) {
+        //     return yen * 150;
+        // }
+
+        // let text = setText("sushil");
+        // console.log(text);
+
+        // function setText(txt = "kaneki") {
+        //     return `Hello! ${txt}`;
+        // };
+
+        // const testFunc = function (val1, val2) {
+        //     return val1 + val2;
+        // };
+
+        // console.log(testFunc(10, 20));
+
+        // const setZero = (val) => {
+        //     // if (val < 10) {
+        //     //     return `0${val}`;
+        //     // } else {
+        //     //     return val;
+        //     // }
+
+        //     if (val >= 0 && val < 10) {
+        //         val = `0${val}`;
+        //     }
+        //     return val;
+        // };
+
+        // console.log(setZero(11));
+
+        let value = [5, 10, 15, 20, 25];
+
+        const getAverage = (val) => {
+            let num = 0;
+            for (let i = 0; i < val.length; i++) {
+                num += val[i];
+            }
+            num /= val.length;
+            return num;
+        };
+
+        console.log(getAverage(value));
+
+        const clickEvent = (e) => {
+            console.log(e.target);
+            e.target.style.color = "#f00";
+        };
+
+        window.addEventListener("click", (e) => {
+            clickEvent(e);
+        });
+    </script>
+</body>
+
+</html>
